@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body {
+	height: 100vh;
+	position: relative;
+	background-color: #f5f5f5;
+}
+
+        .wrapper-circle{
+            margin:auto;
+            position: relative;
+    width:400px;
+    height:400px;
+    display:grid;
+    background-color: yellow;
+    grid-template-columns: 100px 200px 100px;
+    grid-template-rows: 100px 200px 100px;
+    
+
+}
+        
+svg,
+#logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+       
+}
+
+#logo {
+	width: 40px;
+	height: 40px;
+	background-color: ;
+    color:blue;
+    font-size:30px;
+	border-radius: 100px;
+	opacity: 0;
+	animation: fadeIn 0.75s linear forwards;
+	animation-delay: 2s;
+    transform-origin: 0,0;
+    transform: translate(-80%, -50%)
+        }
+
+
+        #trades-wrapper-1{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            
+
+}
+               #trades-wrapper-2{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            }
+ 
+        #trades-wrapper-3{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            
+
+}
+               #trades-wrapper-4{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            }
+        
+
+
+        .trades-left{
+        grid-column: 1 / 2;
+}
+                .trades-right{
+        grid-column: 2 / 3;
+}
+        .trades-top{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+}
+                .trades-bottom{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+}
+        #trades-1-1{
+        background-image: url(noun-project/mason.png);
+        background-repeat: no-repeat;
+background-size: 70px;
+background-position: center;   
+}
+        #trades-2-1{
+        background-image: url(noun-project/mechanic.png);
+        background-repeat: no-repeat;
+background-size: 40px;
+background-position: center;   
+}
+        
+               #trades-1-2{
+        background-image: url(noun-project/farmer.png);
+        background-repeat: no-repeat;
+background-size: 70px;
+background-position: center;   
+}
+                #trades-2-2{
+        background-image: url(noun-project/restaurant.png);
+        background-repeat: no-repeat;
+background-size: 60px;
+background-position: center;   
+}
+
+               #trades-1-3{
+        background-image: url(noun-project/party.png);
+        background-repeat: no-repeat;
+background-size: 70px;
+background-position: center;   
+}
+        #trades-2-3{
+background-image: url(noun-project/theatre.png);
+background-repeat: no-repeat;
+background-size: 40px;
+background-position: center;   
+}
+ 
+                       #trades-1-4{
+background-image: url(noun-project/sauna.png);
+background-repeat: no-repeat;
+background-size: 70px;
+background-position: center;   
+}
+                #trades-2-4{
+        background-image: url(noun-project/hotel.png);
+        background-repeat: no-repeat;
+background-size: 60px;
+background-position: center;   
+}
+        
+.addCSS {
+            animation: stroke 2s ease-out forwards;
+        }
+        
+.circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke: blue;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;   
+}
+        
+        .trades{
+        
+  }
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+   
+        
+    #parent{
+        
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px;    
+   
+    
+}
+        
+        
+
+        .foreclosure{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;        
+    background-image: url(noun-project/foreclosure.png);
+    background-repeat: no-repeat;
+    background-size: 160px;
+    background-position: center;
+    opacity:0;
+    transition: 15s;
+    
+        }
+        
+        
+        .poverty{
+    grid-column: 3 / 4 ;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;        
+    background-image: url(noun-project/tramp.png);
+    background-repeat: no-repeat;
+    background-size: 160px;
+    background-position: center;
+    opacity:0;
+    transition: 25s;
+    
+        }
+        
+        
+        
+        .walmart{
+    grid-column: 1 / 2 ;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;        
+    background-image: url(noun-project/Walmart.png);
+    background-repeat: no-repeat;
+    background-size: 160px;
+    background-position: center;
+        }
+        
+        .opac{
+   
+    opacity:1;
+    color:red;
+    font-size: 100px;
+}
+        
+        .child{
+    grid-column: 1 / 3 ;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 100%;
+    background-image: url(noun-project/money%20truck.png);
+    background-repeat: no-repeat;
+        background-size: 160px;
+    background-position: left;
+        opacity: 1;
+    color: white;
+            
+           
+    }
+    
+        .addClassD{
+    transition: 15s;
+    transition-timing-function: cubic-bezier(0, -0.27, 1, 0.05);
+    transform:translateX(100%);
+    opacity: 0;
+       
+}
+
+        
+ 
+    
+        
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper-circle">
+    <div class="trades"></div>
+    <div class="trades-wrapper" id="trades-wrapper-1">
+    <div class="trades trades-left" id="trades-1-1"></div>
+    <div class="trades trades-right" id="trades-2-1"></div>    </div>
+    <div class="trades-wrapper" id="trades-wrapper-2">
+    <div class="trades trades-top" id="trades-1-2"></div>
+    <div class="trades trades-bottom" id="trades-2-2"></div>
+    </div>
+    
+     <div class="trades-wrapper" id="trades-wrapper-3">
+    <div class="trades trades-left" id="trades-1-3"></div>
+    <div class="trades trades-right" id="trades-2-3"></div>
+    </div>
+    
+    <div class="trades-wrapper" id="trades-wrapper-4">
+    <div class="trades trades-top" id="trades-1-4"></div>
+    <div class="trades trades-bottom" id="trades-2-4"></div>
+    </div>
+    
+<svg height="200" width="200">
+	<circle  id="animated-circle" class="circle" cx="100" cy="100" r="95" stroke="#231f20" stroke-width="10" fill-opacity="0" />
+</svg>
+
+
+
+    
+<div id="logo">0,00</div>
+</div>  
+   <input type="number" id="investing">   
+    
+    <br>
+    
+    <p></p>
+    
+    
+    <audio id="my-audio">
+  <source src="money-sound.wav" type="audio/wav">
+  <source src="audiofile.ogg" type="audio/ogg">
+  <!-- place fallback here as <audio> supporting browsers will ignore it
+  <p>Download<a href="audiofile.mp3">audiofile.mp3</a></p> -->
+</audio>
+
+ <audio id="my-audio-two">
+  <source src="car-sound.mp3" type="audio/mp3">
+  <source src="audiofile.ogg" type="audio/ogg">
+  <!-- place fallback here as <audio> supporting browsers will ignore it
+  <p>Download<a href="audiofile.mp3">audiofile.mp3</a></p> -->
+</audio>
+
+<!-- custom play and pause buttons -->
+<button id="play">play</button>
+<p></p>
+<div id="rounds">nr</div>
+<p></p>
+<div class="average-earnings-label">
+average earnings <div id="average-earnings">ae</div>
+</div>
+ <p></p>
+
+ 
+ <div class="text">Lokaal en QR vrije zone</div>
+ 
+ <div class="text-your-investment">This the result of your investment in a community</div>
+  
+   
+   <!-- <button id="pause">pause</button>
+    --> 
+   
+    
+<div id="parent">
+<div class="walmart"></div>
+<div class="child" id="child">hello</div>
+<div id="foreclosure" class="foreclosure">foreclosure</div>
+<div class="poverty" id="poverty"></div>
+
+</div> 
+    
+   <script> 
+       
+
+       
+       window.onload = function(){
+
+  
+
+  var foreclosure = document.getElementById('foreclosure');
+  var poverty = document.getElementById('poverty');
+  var secondAnimation = document.getElementById('parent');
+  var myAudio = document.getElementById('my-audio');
+  var myAudioTwo = document.getElementById('my-audio-two');   var play = document.getElementById('play');
+  var pause = document.getElementById('pause');
+  var rounds = document.getElementById('rounds');
+  var earnings = document.getElementById('average-earnings');
+  var amountInvested = document.getElementById('invested');
+  
+
+  // associate functions with the 'onclick' events
+  play.onclick  = function(){
+                  addClass();
+                                  
+} 
+  secondAnimation.onclick = function(){
+                    addClassDrain();
+                    playAudioTwo();
+
+}
+
+   function playAudio() {
+    myAudio.play();
+  }
+  function playAudioTwo() {
+    myAudioTwo.play();
+  }
+
+
+  function pauseAudio() {
+    myAudio.pause();
+  }
+
+var v = document.getElementById("animated-circle");
+var counter = 0; 
+var amount = 0;
+var totalAmount = 0;
+       
+       function addClass() {
+           var investment = document.getElementById('investing').value;
+           counter++;
+           totalAmount = investment * counter * 8;
+           v.classList.add("addCSS");
+            setTimeout(function() {
+
+     removeClass();   
+                document.getElementById("logo").innerHTML = totalAmount;
+                rounds.innerHTML = counter;
+                earnings.innerHTML = totalAmount / 8;
+                playAudio();
+                
+
+}, 1000);}
+               
+        
+       
+       function removeClass() {            
+            v.classList.remove("addCSS");} 
+             
+       function myFunction() {
+  setTimeout(function() {
+    removeClass;
+}, 5000);}
+
+           
+           
+}
+    var geldAuto = document.getElementById('child');
+       
+    
+       function addClassDrain() {
+           
+           geldAuto.classList.add('addClassD');
+           
+           
+           setTimeout(function() {
+
+            poverty.classList.add('opac');
+            foreclosure.classList.add('opac');   
+
+}, 12000);}
+           
+       
+       
+       
+        
+       /*     setTimeout(function() {  */
+
+       
+  
+    </script>  
+</body>
+</html>
+
+<!-- <style>
+        .addCSS {
+            background-color:green;
+            color: white;
+            padding:20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+          
+<body style = "text-align:center;"> 
+      
+    <h1 style = "color:green;" > 
+        GeeksForGeeks 
+    </h1> 
+  
+    <p id = "p">
+        A Computer Science portal for Geeks.
+    </p>
+  
+    <button onclick = "addClass()"> 
+        AddClass
+    </button> 
+      
+    <!-- Script to add class name        
+    <script> 
+        function addClass( {
+            var v = document.getElementById("animated-circle");
+            v.classList.add("addCSS");
+        }
+    </script>  --> 
