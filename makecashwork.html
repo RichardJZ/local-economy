@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Line Element Tutorial</title>
+    <style>
+        
+        svg{
+        width:"500px";
+        height:"500px";
+
+}
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+
+        }
+
+        .container {
+            grid-column: 2 / 7;
+            grid-row: 2 / 7;
+            background: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            border: 3px solid black;
+        }
+        
+        .wrapper-container{
+            display:grid;
+            grid-template-columns: repeat(8,100px);
+            grid-template-rows: repeat(8,100px);
+            background: rgb(0, 127,127 );
+            width: 700px;
+            height: 700px;
+            margin: 0 auto;
+            border: 3px solid black;
+
+}
+        
+        .text-in-svg{
+            text-anchor:middle;
+            font-size:.5rem;
+}
+
+        .trades{
+        background-repeat: no-repeat;
+background-size: 120px;
+background-position: center;
+}
+        
+        #bakery{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-image: url(noun-project/bakery.png);
+       
+
+}    
+        #farmer{
+    grid-column: 5/6;
+    grid-row: 1/2;
+    background-image: url(noun-project/farmer.png);
+}
+        
+        #mechanic{
+    grid-column: 7/8;
+    grid-row: 3/4;
+    background-image: url(noun-project/mechanic.png);
+    background-size: 70px;
+  }
+        
+        #mason{
+    grid-column: 7/8;
+    grid-row: 5/6;
+    background-image: url(noun-project/mason.png);
+    background-size: 70px;
+            
+
+}
+        
+ #party-center{
+    grid-column: 5/6;
+    grid-row: 7/8;
+    background-image: url(noun-project/party.png);
+    background-size: 120px;
+            
+
+}    
+         #hotel{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: url(noun-project/hotel.png);
+    
+
+} 
+               #restaurant{
+    grid-column: 3/4;
+    grid-row: 7/8;
+    background-image: url(noun-project/restaurant.png);
+    
+
+} 
+        
+        #greengrocer{
+grid-column: 1/2;
+    grid-row: 5/6;
+    background-image: url(noun-project/greengrocer.png);
+
+
+}
+        #average-earnings{}
+        
+ 
+        
+    </style>
+</head>
+
+<body>
+    <h1>Local Economy</h1>
+    
+    <div class="wrapper-container">
+    
+    <div class="trades" id="bakery"></div>
+    <div class="trades" id="farmer"></div>
+    <div class="trades" id="mechanic"></div>
+    <div class="trades" id="mason"></div>
+    <div class="trades" id="party-center"></div>
+    <div class="trades" id="hotel"></div>
+    
+    <div class="trades" id="restaurant"></div>
+    <div class="trades" id="greengrocer"></div>
+    
+    
+    <div class="container">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+
+            <!-- grid start 
+            <g>
+                <rect style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" width="100" height="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="90" x2="100" y2="90" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="80" x2="100" y2="80" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="70" x2="100" y2="70" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="60" x2="100" y2="60" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="50" x2="100" y2="50" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="40" x2="100" y2="40" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="30" x2="100" y2="30" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="20" x2="100" y2="20" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="0" y1="10" x2="100" y2="10" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="90" y1="0" x2="90" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="80" y1="0" x2="80" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="70" y1="0" x2="70" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="60" y1="0" x2="60" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="50" y1="0" x2="50" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="40" y1="0" x2="40" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="30" y1="0" x2="30" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="20" y1="0" x2="20" y2="100" />
+                <line style="fill:none;stroke:#FFE973;stroke-miterlimit:10;" x1="10" y1="0" x2="10" y2="100" />
+            </g>
+            <!-- grid end -->
+
+            <rect id="rect" x="20" y="2" width="13" height="8" stroke="red" fill="yellow"> </rect>
+            <text class="text-in-svg" id="text-in-svg" x="50" y="50">amount</text>
+            <text class="text-in-svg" id="announcement" x="50" y="35">announcement</text>
+            <text class="text-in-svg" id="average-earnings" x="50" y="65">average earnings</text>
+           <text class="text-in-svg" id="rounds" x="50" y="57">rounds</text>
+            <text class="debt text-in-svg" id="debt-farmer" x="65" y="10">debt</text>
+            
+        </svg>
+        
+
+
+    </div>
+    <div class="center">
+        <button id="button" onclick="circulateMoney()">Click me</button>
+    </div>
+
+
+    </div>
+      
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+     
+    meel<br>
+    eieren<br>
+    boter<br>
+    room <br>
+    <br>
+    <br>
+    <br>
+    <div id="deposit">beDrag</div>  afbetaald voor 2e hands tractor a totaalBedrag
+ 
+    <br>
+    <br>
+    <br>
+       clearing  debts
+       
+    <script>
+        var rounds = document.getElementById("rounds")
+        var timeInterval = 500;
+        var times = 0;
+        var debtAmount = 900;
+        var debtFarmer = document.getElementById("debt-farmer");
+        var members = 8;
+        var amount = 300;
+        var totalAmount = 7200;
+        var averageEarnings = totalAmount / members;
+        var textSvg = document.getElementById("text-in-svg");
+        var textAverageEarnings = document.getElementById("average-earnings");
+        debtFarmer.innerHTML = debtAmount;
+        var keer = 1;
+      
+        
+        function firstPos() {
+           document.getElementById("rect").setAttribute("x", "60");
+            
+            times++;
+            totalAmount = times * amount;
+            textSvg.innerHTML = totalAmount + " EUR";
+           
+            /*
+            debtAmount = debtAmount - (keer * amount);
+            
+            
+            if(totalAmount > 0){debtFarmer.innerHTML = debtAmount;
+        }
+            else {debtfarmer = 0} 
+            
+            */
+        }
+            
+         function secondPos() {
+             times++
+             totalAmount = times * amount;
+           document.getElementById("rect").setAttribute("x", "90");
+             
+           document.getElementById("rect").setAttribute("y", "20");
+           document.getElementById("rect").setAttribute("width", "8");
+           document.getElementById("rect").setAttribute("height", "13");
+            textSvg.innerHTML=totalAmount + " EUR";
+        }
+        
+              function thirdPos() {
+           times++
+           totalAmount = times * amount;
+            
+           document.getElementById("rect").setAttribute("y", "60");
+           textSvg.innerHTML=totalAmount + " EUR";
+        }
+        
+             function fourthPos() {
+                times++
+                totalAmount = times * amount;
+           document.getElementById("rect").setAttribute("x", "60");
+           document.getElementById("rect").setAttribute("y", "90");
+           document.getElementById("rect").setAttribute("width", "13");
+           document.getElementById("rect").setAttribute("height", "8");
+            textSvg.innerHTML=totalAmount + " EUR";
+        }
+        
+             function fifthPos() {
+
+                 times++
+                 totalAmount = times * amount;
+                 document.getElementById("rect").setAttribute("x", "20");
+           textSvg.innerHTML=totalAmount + " EUR";
+        }
+        
+             function sixthPos() {
+                 times++
+                 totalAmount = times * amount;
+           document.getElementById("rect").setAttribute("x", "2");
+           document.getElementById("rect").setAttribute("y", "60");
+           document.getElementById("rect").setAttribute("width", "8");
+           document.getElementById("rect").setAttribute("height", "13");
+        textSvg.innerHTML=totalAmount + " EUR";
+        }
+        
+             function seventhPos() {
+                 times++
+                 totalAmount = times * amount;
+           document.getElementById("rect").setAttribute("y", "20");
+           textSvg.innerHTML=totalAmount + " EUR";
+        }
+        
+              function eighthPos() {
+                  times++
+                  totalAmount = times * amount;
+                  
+           document.getElementById("rect").setAttribute("x", "20");
+           document.getElementById("rect").setAttribute("y", "2");
+           document.getElementById("rect").setAttribute("width", "13");
+           document.getElementById("rect").setAttribute("height", "8");
+           textSvg.innerHTML=totalAmount + " EUR";
+            textAverageEarnings.innerHTML = 
+            averageEarnings = totalAmount / members;
+            rounds.innerHTML = times / members;
+              }
+        
+ function circulateMoney(){
+
+setTimeout(firstPos, timeInterval);
+setTimeout(secondPos, timeInterval * 2);
+setTimeout(thirdPos, timeInterval * 3);
+setTimeout(fourthPos, timeInterval * 4);
+setTimeout(fifthPos, timeInterval * 5);
+setTimeout(sixthPos, timeInterval * 6);
+setTimeout(seventhPos, timeInterval * 7);
+setTimeout(eighthPos, timeInterval * 8);
+
+
+}    
+        
+        
+    </script>
+</body>
+
+</html>
